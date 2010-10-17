@@ -2,5 +2,10 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
- haml "%h1 Bernardo Arancibia Araos"
+ haml :index
 end
+
+__END__
+
+@@index
+%h1 Hola Mundo!
