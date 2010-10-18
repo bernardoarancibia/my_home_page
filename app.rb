@@ -30,34 +30,44 @@ body
 p
   font:
     size: 13px
+a
+  text-decoration: none
+  color: green
 
 #header
   p.title
     font:
       family: 'Droid Sans', arial, serif
       weight: bold
-      size: 2.5em
-    text-align: center
-    color: black
-  height: 2.5em
+      size: 2em
+    color: #FF8E04
+  text-shadow: #C0C0C0 0px 2px 1px
+  width: 700px
+  height: 4em
   margin: auto
 
 #container
   background:
     color: white
   width: 700px
-  height: 800px
   margin: auto
-  padding: 30px
+  padding: 10px 10px 20px 40px
   -moz-border-radius: 10px
+  p
+    margin-left: 10px
+
+#main_menu
+  text-align: right
+  text-shadow: #C0C0C0 1px 2px 1px
+  ul
+    li
+      display: inline
+      padding: .5em
+  padding: .5em
 
 .software
   td
     padding: 10px
-
-.content
-  th
-    width: 350px
 
 @@layout
 !!!5
@@ -72,13 +82,33 @@ p
     #header
       %p.title Bernardo Arancibia
     #container= yield
+    #footer
+      %center
+        %p= Time.now
 
 @@index
+#main_menu
+  %ul
+    %li
+      %a{:href => '#'}
+        Home
+    %li
+      %a{:href => '#'}
+        GitHub
+    %li
+      %a{:href => '#'}
+        Bookmarks
+    %li
+      %a{:href => '#'}
+        Contact me
+
 %p
-  Analista Programador con título Técnico Universitario en Informática, Universidad Técnica
-  Federíco Santa María.
+  Técnico Universitario en Informática (Analista Programador)
+  Universidad TécnicaFederíco Santa María.
+
 %br
 %center
+  %h4 Tecnologías favoritas
   %table.software
     %tr
       %td
@@ -91,13 +121,3 @@ p
         %img{:src => 'images/sinatra.png'}
 %br
 %br
-
-%table.content
-  %th
-    %h2 Blog
-  %th
-    %h2 Twitter
-  %tr
-  %td
-    Aquí va el contenido del blog
-  %td Este es mi twit!
