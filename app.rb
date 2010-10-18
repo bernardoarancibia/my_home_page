@@ -63,6 +63,7 @@ p
 !!!5
 %html
   %head
+    %meta{ :content => "text/html", :charset => "utf-8" }
     %title Bernardo Arancibia Araos
     %link{ :href => 'app.css', :rel => 'stylesheet', :type => 'text/css'}
     %link{ :href => 'http://fonts.googleapis.com/css?family=Lobster&subset=latin', :rel => 'stylesheet', :type => 'text/css'}
