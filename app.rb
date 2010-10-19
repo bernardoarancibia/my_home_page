@@ -56,6 +56,7 @@ a:hover
   margin: auto
   padding: 5px 10px 20px 40px
   -moz-border-radius: 10px
+  -webkit-border-radius: 10px
   p
     margin-left: 20px
     margin-right: 5px
