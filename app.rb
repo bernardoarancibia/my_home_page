@@ -21,10 +21,10 @@ __END__
 
 @@app
 body
+  margin: 0px
   background:
     image: url(images/body_back.png)
     attachment: fixed
-  font-family: arial
   font:
     family: 'Droid Sans', arial, serif
 p
@@ -32,18 +32,21 @@ p
     size: 13px
 a
   text-decoration: none
-  color: green
+  color: #7F7F7F
+
+a:hover
+  color: red
 
 #header
   p.title
     font:
       family: 'Droid Sans', arial, serif
       weight: bold
-      size: 2em
-    color: #FF8E04
+      size: 3em
+    color: black
   text-shadow: #C0C0C0 0px 2px 1px
   width: 700px
-  height: 4em
+  height: 40px
   margin: auto
 
 #container
@@ -51,10 +54,11 @@ a
     color: white
   width: 700px
   margin: auto
-  padding: 10px 10px 20px 40px
+  padding: 5px 10px 20px 40px
   -moz-border-radius: 10px
   p
-    margin-left: 10px
+    margin-left: 20px
+    margin-right: 5px
 
 #main_menu
   text-align: right
@@ -80,11 +84,10 @@ a
     %link{ :href => 'http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin', :rel => 'stylesheet', :type => 'text/css'}
   %body
     #header
-      %p.title Bernardo Arancibia
+      %p.title BERNARDO ARANCIBIA
     #container= yield
     #footer
       %center
-        %p= Time.now
 
 @@index
 #main_menu
@@ -101,14 +104,17 @@ a
     %li
       %a{:href => '#'}
         Contact me
-
+%img{ :src => 'images/foto.png', :style => 'float: right' }
+%h1 ¿Quién soy?
 %p
-  Técnico Universitario en Informática (Analista Programador)
-  Universidad TécnicaFederíco Santa María.
+  Estudiante de la carrera Técnico Universitario en Informática (Analista Programador)
+  en la Universidad Técnica Federíco Santa María, sede Viña del Mar.
+%p
+  Miembro de la comunidad Archlinux Chile, bajista aficionado y fanático de todo lo que
+  tenga que ver con el lenguaje de programación Ruby.
 
 %br
 %center
-  %h4 Tecnologías favoritas
   %table.software
     %tr
       %td
