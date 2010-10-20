@@ -80,6 +80,7 @@ a:hover
 .twitter
   td
     background-color: #F3F3F3
+    width: 600px
 
 #footer
   color: white
