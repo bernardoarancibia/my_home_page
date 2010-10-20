@@ -58,8 +58,8 @@ a:hover
   width: 700px
   margin: auto
   padding: 5px 10px 20px 40px
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
+  -moz-border-radius: 20px 20px 10px 10px
+  -webkit-border-radius: 20px 20px 10px 10px
   p
     margin-left: 20px
     margin-right: 5px
@@ -139,8 +139,6 @@ a:hover
         %img{:src => 'images/rails.png'}
       %td
         %img{:src => 'images/sinatra.png'}
-%br
-%br
 %h2 Twitter
 %h4
   %a{:href => "http://www.twitter.com/bernarancibia"}
