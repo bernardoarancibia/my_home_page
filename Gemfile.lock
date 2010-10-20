@@ -1,10 +1,21 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    crack (0.1.8)
     haml (3.0.21)
+    hashie (0.4.0)
+    httparty (0.6.1)
+      crack (= 0.1.8)
+    multi_json (0.0.4)
+    oauth (0.4.3)
     rack (1.2.1)
     sinatra (1.0)
       rack (>= 1.0)
+    twitter (0.9.12)
+      hashie (~> 0.4.0)
+      httparty (~> 0.6.1)
+      multi_json (~> 0.0.4)
+      oauth (~> 0.4.3)
 
 PLATFORMS
   ruby
@@ -12,3 +23,4 @@ PLATFORMS
 DEPENDENCIES
   haml
   sinatra
+  twitter

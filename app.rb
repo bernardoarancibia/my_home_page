@@ -2,12 +2,15 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'twitter'
 
 enable :inline_templates
 set :root, File.dirname(__FILE__)
 
 
 get '/' do
+ search = Twitter::Search.new.from('bernarancibia')
+ @twitts = search.map {|p| p.text}
  haml :index
 end
 
@@ -43,7 +46,7 @@ a:hover
       family: 'Droid Sans', arial, serif
       weight: bold
       size: 3em
-    color: black
+    color: white
   text-shadow: #C0C0C0 0px 2px 1px
   width: 700px
   height: 40px
@@ -74,6 +77,13 @@ a:hover
   td
     padding: 10px
 
+.twitter
+  td
+    background-color: #F3F3F3
+
+#footer
+  color: white
+
 @@layout
 !!!5
 %html
@@ -89,6 +99,7 @@ a:hover
     #container= yield
     #footer
       %center
+        %p= Time.now
 
 @@index
 #main_menu
@@ -97,7 +108,7 @@ a:hover
       %a{:href => '#'}
         Home
     %li
-      %a{:href => '#'}
+      %a{:href => 'http://www.github.com/bernardoarancibia'}
         GitHub
     %li
       %a{:href => '#'}
@@ -105,6 +116,7 @@ a:hover
     %li
       %a{:href => '#'}
         Contact me
+%br
 %img{ :src => 'images/foto.png', :style => 'float: right' }
 %h1 ¿Quién soy?
 %p
@@ -128,3 +140,13 @@ a:hover
         %img{:src => 'images/sinatra.png'}
 %br
 %br
+%h2 Twitter
+%h4
+  %a{:href => "http://www.twitter.com/bernarancibia"}
+    @bernarancibia
+%twitter.twitter
+  %table
+    - @twitts.each do |t|
+      %tr
+        %td
+          %p= t
