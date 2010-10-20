@@ -150,4 +150,4 @@ a:hover
     - @twitts.each do |t|
       %tr
         %td
-          %p= t
+          %p&= t
