@@ -145,7 +145,7 @@ a:hover
     @bernarancibia
 %twitter.twitter
   %table
-    - @twitts.each do |t|
+    - @twitts[0..4].each do |t|
       %tr
         %td
           %p&= t
