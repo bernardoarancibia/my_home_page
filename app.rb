@@ -45,11 +45,11 @@ a:hover
     font:
       family: 'Droid Sans', arial, serif
       weight: bold
-      size: 3em
+      size: 3.8em
     color: white
   text-shadow: #C0C0C0 0px 2px 1px
-  width: 700px
-  height: 40px
+  width: 740px
+  height: 49px
   margin: auto
 
 #container
