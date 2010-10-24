@@ -102,7 +102,7 @@ a:hover
     #container= yield
     #footer
       %center
-        %p= Time.now
+        %p= Time.now.year
 
 @@index
 #main_menu
