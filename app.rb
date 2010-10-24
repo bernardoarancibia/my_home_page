@@ -108,7 +108,7 @@ a:hover
 #main_menu
   %ul
     %li
-      %a{:href => '#'}
+      %a{:href => '/'}
         Home
     %li
       %a{:href => 'http://www.github.com/bernardoarancibia'}
