@@ -57,7 +57,7 @@ a:hover
 #container
   background:
     color: white
-  width: 700px
+  width: 800px
   margin: auto
   padding: 5px 10px 20px 40px
   -moz-border-radius: 20px 20px 10px 10px
