@@ -57,7 +57,7 @@ a:hover
 #container
   background:
     color: white
-  width: 800px
+  width: 700px
   margin: auto
   padding: 5px 10px 20px 40px
   -moz-border-radius: 20px 20px 10px 10px
@@ -86,6 +86,9 @@ a:hover
 
 #footer
   color: white
+
+.photo
+  padding-left: 40px
 
 @@layout
 !!!5
@@ -120,7 +123,7 @@ a:hover
       %a{:href => '#'}
         Contact me
 %br
-%img{ :src => 'images/foto.png', :style => 'float: right' }
+%img.photo{ :src => 'images/foto.png', :style => 'float: right' }
 %h1 ¿Quién soy?
 %p
   Estudiante de la carrera Técnico Universitario en Informática (Analista Programador)
