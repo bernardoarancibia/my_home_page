@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     crack (0.1.8)
+    git_hub (0.3.0)
     haml (3.0.21)
     hashie (0.4.0)
     httparty (0.6.1)
@@ -21,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  git_hub
   haml
   sinatra
   twitter

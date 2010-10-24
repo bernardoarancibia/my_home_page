@@ -10,7 +10,9 @@ set :root, File.dirname(__FILE__)
 
 get '/' do
  search = Twitter::Search.new.from('bernarancibia')
- @twitts = search.map {|p| p.text}
+ @twitts = search.map {|s| s.text}
+ @image = search.map {|s| s.profile_image_url}
+ @image = @image[0]
  haml :index
 end
 
@@ -77,10 +79,10 @@ a:hover
   td
     padding: 10px
 
-.twitter
+#twitter
+  width: 650px
   td
     background-color: #F3F3F3
-    width: 600px
 
 #footer
   color: white
@@ -143,9 +145,11 @@ a:hover
 %h4
   %a{:href => "http://www.twitter.com/bernarancibia"}
     @bernarancibia
-%twitter.twitter
+#twitter
   %table
     - @twitts[0..4].each do |t|
       %tr
+        %td
+          %img{ :src => @image }
         %td
           %p&= t
