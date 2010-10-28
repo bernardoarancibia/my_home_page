@@ -80,7 +80,7 @@ a:hover
     padding: 10px
 
 #twitter
-  width: 650px
+  width: 90%
   td
     background-color: #F3F3F3
 
@@ -89,6 +89,10 @@ a:hover
 
 .photo
   padding-left: 40px
+  background-color: white
+
+.twitt
+  width: 450px
 
 @@layout
 !!!5
@@ -154,5 +158,5 @@ a:hover
       %tr
         %td
           %img{ :src => @image }
-        %td
-          %p&= t
+        %td.twitt
+          %p= t
