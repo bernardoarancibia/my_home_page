@@ -47,7 +47,7 @@ a:hover
     font:
       family: 'Droid Sans', arial, serif
       weight: bold
-      size: 3.8em
+      size: 250%
     color: white
   text-shadow: #C0C0C0 0px 2px 1px
   width: 740px
@@ -109,7 +109,7 @@ a:hover
     #container= yield
     #footer
       %center
-        %p= Time.now.year
+        %p= "Bernardo Arancibia Araos (Viña del Mar, Chile, #{Time.now.year})"
 
 @@index
 #main_menu
@@ -121,8 +121,8 @@ a:hover
       %a{:href => 'http://www.github.com/bernardoarancibia'}
         GitHub
     %li
-      %a{:href => '#'}
-        Bookmarks
+      %a{:href => 'http://cl.linkedin.com/pub/bernardo-arancibia-araos/23/177/a84'}
+        LinkedIn
     %li
       %a{:href => '#'}
         Contact me
