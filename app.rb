@@ -48,7 +48,7 @@ a:hover
       family: 'Droid Sans', arial, serif
       weight: bold
       size: 250%
-    color: white
+    color: #565656
   text-shadow: #C0C0C0 0px 2px 1px
   width: 740px
   height: 49px
