@@ -63,11 +63,11 @@ a:hover
 #container
   background:
     color: white
-  width: 700px
+  width: 750px
   margin: auto
-  padding: 5px 10px 20px 40px
-  -moz-border-radius: 20px 20px 10px 10px
-  -webkit-border-radius: 20px 20px 10px 10px
+  padding: 5px 20px 20px 30px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
   p
     margin-left: 20px
     margin-right: 5px
@@ -91,7 +91,7 @@ a:hover
     background-color: #F3F3F3
 
 #footer
-  color: white
+  color: #7F7F7F
 
 .photo
   padding-left: 40px
@@ -115,7 +115,7 @@ a:hover
     #container= yield
     #footer
       %center
-        %p= "Bernardo Arancibia Araos -- Viña del Mar, Chile, #{Time.now.year}"
+        %p= "Bernardo Arancibia Araos - Viña del Mar, Chile #{Time.now.year}"
 
 @@index
 #main_menu
