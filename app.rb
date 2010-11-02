@@ -32,11 +32,17 @@ body
     attachment: fixed
   font:
     family: 'Droid Sans', arial, serif
+
+img
+  border: 0
+
 p
   font:
     size: 13px
+
 a
   text-decoration: none
+
   color: #7F7F7F
 
 a:hover
@@ -109,7 +115,7 @@ a:hover
     #container= yield
     #footer
       %center
-        %p= "Bernardo Arancibia Araos (Viña del Mar, Chile, #{Time.now.year})"
+        %p= "Bernardo Arancibia Araos -- Viña del Mar, Chile, #{Time.now.year}"
 
 @@index
 #main_menu
@@ -133,7 +139,10 @@ a:hover
   Estudiante de la carrera Técnico Universitario en Informática (Analista Programador)
   en la Universidad Técnica Federíco Santa María, sede Viña del Mar.
 %p
-  Miembro de la comunidad Archlinux Chile, bajista aficionado y fanático de todo lo que
+  Miembro de la comunidad
+  %a{:href => 'http://www.archlinux.cl'}
+    Archlinux Chile
+  , bajista aficionado y fanático de todo lo que
   tenga que ver con el lenguaje de programación Ruby.
 
 %br
@@ -141,13 +150,17 @@ a:hover
   %table.software
     %tr
       %td
-        %img{:src => 'images/tux.png'}
+        %a{ :href => 'http://www.archlinux.org' }
+          %img{ :src => 'images/tux.png' }
       %td
-        %img{:src => 'images/ruby.png'}
+        %a{ :href => 'http://www.ruby-lang.org' }
+          %img{ :src => 'images/ruby.png' }
       %td
-        %img{:src => 'images/rails.png'}
+        %a{ :href => 'http://rubyonrails.org' }
+          %img{ :src => 'images/rails.png' }
       %td
-        %img{:src => 'images/sinatra.png'}
+        %a{ :href => 'http://www.sinatrarb.com' }
+          %img{:src => 'images/sinatra.png'}
 %h2 Twitter
 %h4
   %a{:href => "http://www.twitter.com/bernarancibia"}
