@@ -130,7 +130,7 @@ a:hover
       %a{:href => 'http://cl.linkedin.com/pub/bernardo-arancibia-araos/23/177/a84'}
         LinkedIn
     %li
-      %a{:href => '#'}
+      %a{:href => 'mailto:bernardo@kde.cl'}
         Contact me
 %br
 %img.photo{ :src => 'images/foto.png', :style => 'float: right' }
