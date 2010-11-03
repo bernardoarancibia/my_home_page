@@ -111,7 +111,7 @@ a:hover
     %link{ :href => 'http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin', :rel => 'stylesheet', :type => 'text/css'}
   %body
     #header
-      %p.title BERNARDO ARANCIBIA
+      %p.title BERNARDO#ARANCIBIA
     #container= yield
     #footer
       %center
