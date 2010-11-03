@@ -9,11 +9,11 @@ set :root, File.dirname(__FILE__)
 
 
 get '/' do
- search = Twitter::Search.new.from('bernarancibia')
- @twitts = search.map {|s| s.text}
- @image = search.map {|s| s.profile_image_url}
- @image = @image[0]
- haml :index
+  @user = "bernarancibia"
+  search = Twitter::Search.new.from(@user)
+  @twitts = search.map { |t| [t.profile_image_url, t.id_str, t.text] }
+  @twitt_link = "http://twitter.com/#{@user}/status/"
+  haml :index
 end
 
 get '/app.css' do
@@ -89,6 +89,11 @@ a:hover
   width: 90%
   td
     background-color: #F3F3F3
+  a
+    color: black
+    font-size: 13px
+  a:hover
+    color: red
 
 #footer
   color: #7F7F7F
@@ -98,7 +103,7 @@ a:hover
   background-color: white
 
 .twitt
-  width: 450px
+  width: 90%
 
 @@layout
 !!!5
@@ -163,13 +168,14 @@ a:hover
           %img{:src => 'images/sinatra.png'}
 %h2 Twitter
 %h4
-  %a{:href => "http://www.twitter.com/bernarancibia"}
-    @bernarancibia
+  %a{:href => "http://www.twitter.com/#{@user}"}
+    = "@#{@user}"
 #twitter
   %table
-    - @twitts[0..4].each do |t|
+    - @twitts[0..9].each do |t|
       %tr
         %td
-          %img{ :src => @image }
+          %img{ :src => t[0], :alt => 'avatar' }
         %td.twitt
-          %p= t
+          %a{ :href => @twitt_link + t[1], :target => "_blank" }
+            = t[2]
