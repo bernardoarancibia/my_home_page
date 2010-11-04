@@ -155,17 +155,23 @@ a:hover
   %table.software
     %tr
       %td
-        %a{ :href => 'http://www.archlinux.org' }
-          %img{ :src => 'images/tux.png' }
-      %td
         %a{ :href => 'http://www.ruby-lang.org' }
-          %img{ :src => 'images/ruby.png' }
+          %img{ :src => 'images/ruby.png', :alt => 'ruby' }
       %td
         %a{ :href => 'http://rubyonrails.org' }
-          %img{ :src => 'images/rails.png' }
+          %img{ :src => 'images/rails.png', :alt => 'rubyonrails' }
       %td
         %a{ :href => 'http://www.sinatrarb.com' }
-          %img{:src => 'images/sinatra.png'}
+          %img{:src => 'images/sinatra.png', :alt => 'sinatra' }
+      %td
+        %a{ :href => 'http://www.vim.org' }
+          %img{ :src => 'images/vim.png', :alt => 'vim' }
+      %td
+        %a{ :href => 'http://git-scm.com' }
+          %img{ :src => 'images/git.png', :alt => 'git' }
+      %td
+        %a{ :href => 'http://www.archlinux.org' }
+          %img{ :src => 'images/tux.png', :alt => 'linux' }
 %h2 Twitter
 %h4
   %a{:href => "http://www.twitter.com/#{@user}"}
