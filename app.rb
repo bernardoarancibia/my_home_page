@@ -46,7 +46,7 @@ a
   color: #7F7F7F
 
 a:hover
-  color: red
+  color: orange
 
 #header
   p.title
@@ -93,7 +93,7 @@ a:hover
     color: black
     font-size: 13px
   a:hover
-    color: red
+    color: orange
 
 #footer
   color: #7F7F7F
@@ -104,6 +104,9 @@ a:hover
 
 .twitt
   width: 90%
+
+.orange
+  color: #FFB144
 
 @@layout
 !!!5
@@ -116,7 +119,10 @@ a:hover
     %link{ :href => 'http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin', :rel => 'stylesheet', :type => 'text/css'}
   %body
     #header
-      %p.title BERNARDO#ARANCIBIA
+      %p.title
+        = "BERNARDO"
+        %span.orange
+          = "# ARANCIBIA"
     #container= yield
     #footer
       %center
