@@ -1,0 +1,9 @@
+= My Own Home Page
+A simple home page, with twitter feeder.
+
+== Tools
+* rack
+* sinatra
+* bundler
+* haml / sass (Old Version)
+* twitter gem
