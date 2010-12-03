@@ -9,7 +9,10 @@ set :root, File.dirname(__FILE__)
 
 
 get '/' do
+  ######################
+  # Twitter Username
   @user = "bernarancibia"
+  ######################
   search = Twitter::Search.new.from(@user)
   @twitts = search.map { |t| [t.profile_image_url, t.id_str, t.text] }
   @twitt_link = "http://twitter.com/#{@user}/status/"
