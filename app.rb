@@ -29,6 +29,7 @@ __END__
 
 @@app
 body
+  color: #2C2C2C
   margin: 0px
   background:
     image: url(images/body_back.png)
@@ -45,8 +46,7 @@ p
 
 a
   text-decoration: none
-
-  color: #7F7F7F
+  color: #5B5B5B
 
 a:hover
   color: orange
@@ -66,7 +66,7 @@ a:hover
 #container
   background:
     color: white
-  width: 750px
+  width: 700px
   margin: auto
   padding: 5px 20px 20px 30px
   -moz-border-radius: 10px
@@ -89,11 +89,11 @@ a:hover
     padding: 10px
 
 #twitter
-  width: 90%
+  width: 100%
   td
     background-color: #F3F3F3
   a
-    color: black
+    color: #5B5B5B
     font-size: 13px
   a:hover
     color: orange
@@ -135,26 +135,32 @@ a:hover
 #main_menu
   %ul
     %li
-      %a{:href => '/'}
-        Home
-    %li
-      %a{:href => 'http://www.github.com/bernardoarancibia'}
+      %a{:href => 'http://www.github.com/bernardoarancibia', :title => 'Mis repositorios personales' }
         GitHub
     %li
-      %a{:href => 'http://cl.linkedin.com/pub/bernardo-arancibia-araos/23/177/a84'}
+      %a{:href => 'http://cl.linkedin.com/pub/bernardo-arancibia-araos/23/177/a84', :title => 'Mi perfil en  LinkedIn'}
         LinkedIn
     %li
-      %a{:href => 'mailto:debiano(arroba)gmail.com'}
+      %a{:href => '#', :title => 'Email: debiano@gmail.com' }
         Contact me
 %br
 %img.photo{ :src => 'images/foto.png', :style => 'float: right' }
-%h1 ¿Quién soy?
+%h2 Sobre mí:
 %p
   Estudiante de la carrera Técnico Universitario en Informática (Analista Programador)
-  en la Universidad Técnica Federíco Santa María, sede Viña del Mar.
+  en la
+  %a{:href => 'http://www.utfsm.cl', :target => '_blank'}
+    Universidad Técnica Federíco Santa María
+  , sede Viña del Mar.
+%p
+  Actualmente estoy realizando mi práctica profesional en
+  %a{:href => 'http://www.comparaonline.com', :target => '_blank'}
+    ComparaOnline
+  , lugar que me dió la oportunidad de aportar con lo mío y a la vez aprender muchísimo del mundo del desarrollo
+  y el emprendimiento web.
 %p
   Miembro de la comunidad
-  %a{:href => 'http://www.archlinux.cl'}
+  %a{:href => 'http://www.archlinux.cl', :target => '_blank'}
     Archlinux Chile
   , bajista aficionado y fanático de todo lo que
   tenga que ver con el lenguaje de programación Ruby.
@@ -164,22 +170,25 @@ a:hover
   %table.software
     %tr
       %td
-        %a{ :href => 'http://www.ruby-lang.org' }
+        %a{ :href => 'http://www.ruby-lang.org', :title => 'Ruby Language' }
           %img{ :src => 'images/ruby.png', :alt => 'ruby' }
       %td
-        %a{ :href => 'http://rubyonrails.org' }
+        %a{ :href => 'http://rubyonrails.org', :title => 'Ruby on Rails MVC Framework' }
           %img{ :src => 'images/rails.png', :alt => 'rubyonrails' }
       %td
-        %a{ :href => 'http://www.sinatrarb.com' }
-          %img{:src => 'images/sinatra.png', :alt => 'sinatra' }
+        %a{ :href => 'http://www.sinatrarb.com', :title => 'Sinatra Framework'  }
+          %img{:src => 'images/sinatra.png', :alt => 'sinatra'}
       %td
-        %a{ :href => 'http://www.vim.org' }
+        %a{ :href => 'http://www.jquery.com', :title => 'jQuery Framework'  }
+          %img{:src => 'images/jquery.png', :alt => 'jquery'}
+      %td
+        %a{ :href => 'http://www.vim.org', :title => 'Vim - Text Editor' }
           %img{ :src => 'images/vim.png', :alt => 'vim' }
       %td
-        %a{ :href => 'http://git-scm.com' }
+        %a{ :href => 'http://git-scm.com', :title => 'Git - Control de Versiones' }
           %img{ :src => 'images/git.png', :alt => 'git' }
       %td
-        %a{ :href => 'http://www.archlinux.org' }
+        %a{ :href => 'http://www.archlinux.org', :title => 'Sistemas Linux - Archlinux' }
           %img{ :src => 'images/tux.png', :alt => 'linux' }
 %h2 Twitter
 %h4
